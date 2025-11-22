@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Platform Sign Up</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="left-c">
+        <h1 class="p-name">ASA Social Tech</h1>
+        <p class="p-name">Finally, a social app that actually helps me connect with intention.</p>
+    </div>
+
+    <div class="signup-container">
+        <div class="img-box">
+            <h1>Join Our Social Platform!</h1>
+            <img src="download.png" alt="">
+
+        </div>
+        <form class="signup-form" action="#" method="POST">
+
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+            </div>
+
+            <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password">
+            </div>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+
+            <a id="allredy-acc" href="login.html">Already Have An Accout ?</a>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const signupForm = document.querySelector('.signup-form');
+
+            if (signupForm) {
+                signupForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Get the values from the form inputs
+                    const firstName = document.getElementById('firstName').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const password = document.getElementById('password').value.trim();
+
+                    // Simple validation check
+                    if (firstName === ""||lastName === "" ||email === "" || password === "") {
+                        alert("Please enter all Input Feilds.");
+                        return;
+                    }
+
+                    if (localStorage.getItem(email)) {
+                        alert("This email is already registered. Please log in.");
+                        return;
+                    }
+
+
+                    localStorage.setItem(email, password);
+
+                    alert(`Welcome, ${firstName}! Your account has been created.`);
+                    console.log(`User Signed Up: ${email}. Password stored (insecurely in localStorage)`);
+
+                    window.location.href = 'login.html';
+                });
+            } else {
+                console.error('Sign-up form not found.');
+            }
+        });
+    </script>
+</body>
+
+</html>

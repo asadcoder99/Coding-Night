@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b0b0b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.left-c {
+    margin-right: 20%;
+    padding: 10px;
+}
+.p-name {
+    color: #16161a;
+}
+.left-c>img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    
+}
+
+.img-box {
+    display: flex;
+}
+
+.img-box>img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: 20px;
+    margin-left: 5px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+/* Container for the entire form */
+.signup-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Heading Style */
+.signup-container h1 {
+    text-align: center;
+    color: #00DFA2;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+/* Styling for each group of input and label */
+.input-group {
+    margin-bottom: 20px;
+    
+}
+
+/* Label Styling */
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Input Field Styling */
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    cursor: pointer;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus/Hover Effect on Input */
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Sign Up Button Styling */
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Button Hover Effect */
+.signup-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Button Click Effect */
+.signup-btn:active {
+    transform: translateY(1px);
+}
+
+
+#allredy-acc{
+  text-decoration: none;
+  font-size: 18px;
+   margin-left: 30%;
+   color: black;
+}
+
+#allredy-acc:hover{
+    text-decoration: underline;
+}
+#allredy-acc:hover{
+    color: #ff6b6b;
+}

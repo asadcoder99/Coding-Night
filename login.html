@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Platform Login</title>
+    <link rel="stylesheet" href="login.css"> 
+</head>
+<body>
+    <div class="signup-container">
+        <div class="logo-png">
+            <h1>Welcome Back!</h1>
+            <img src="download.png" alt="logo">
+        </div>
+        
+        <form class="signup-form" id="loginform" action="#" method="POST">
+            
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="signup-btn">Log In</button>
+
+            <p class="forgot-link">
+                <a href="#">Forgot Password?</a>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginform").addEventListener("submit", function (e) {
+            e.preventDefault(); 
+
+            let Email = document.getElementById("email").value; 
+            let password = document.getElementById("password").value;
+
+
+            let storepass = localStorage.getItem(Email);
+
+            if (storepass === null) {
+                alert("user not exist")
+            } else {
+
+                if (storepass === password) {
+                    alert("login successfully")
+                    window.location.href = 'dashbord.html'
+                } else {
+                    alert("invalid password")
+                    return
+                }
+            }
+        });
+    </script>
+</body>
+</html>

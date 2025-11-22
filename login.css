@@ -1,0 +1,110 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b0b0b0;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/*  Container Styling  */
+.signup-container {
+    background-color: #ffffff; 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 400px;
+}
+
+/*  Heading Style */
+.signup-container h1 {
+    text-align: center;
+    color: #00DFA2; 
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+/*  Input Groups and Labels */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/*  Input Field Styling */
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus Effect  */
+.input-group input:focus {
+    border-color: #ff6b6b; 
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.4);
+    outline: none;
+}
+
+/* Sign Up/Log In Button Styling  */
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+/* Button Hover Effect */
+.signup-btn:hover {
+    background-color: #e55a5a; 
+}
+
+/* Forgot Password  */
+.forgot-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.forgot-link a {
+    color: #0f1c3f; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-link a:hover {
+    color: #ff6b6b; 
+    text-decoration: underline;
+}
+
+.logo-png{
+    display: flex;
+}
+.logo-png > img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-top: 16px;
+    margin-left: 30%;
+    border: 1px solid black;
+}
