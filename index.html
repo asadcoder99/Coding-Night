@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Platform Sign Up</title>
-
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -50,6 +50,7 @@
             <a id="allredy-acc" href="login.html">Already Have An Accout ?</a>
         </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -65,13 +66,25 @@
                     const password = document.getElementById('password').value.trim();
 
                     // Simple validation check
-                    if (firstName === ""||lastName === "" ||email === "" || password === "") {
-                        alert("Please enter all Input Feilds.");
+                    if (firstName === "" || lastName === "" || email === "" || password === "") {
+                        // alert("Please enter all Input Feilds.");
+                        Swal.fire({
+                            icon: "error",
+                            title: "Plese Enter All Input Feilds",
+                            text: "Something went wrong!",
+                            footer: '<a href="#">Why do I have this issue?</a>'
+                        });
                         return;
                     }
 
                     if (localStorage.getItem(email)) {
-                        alert("This email is already registered. Please log in.");
+                        Swal.fire({
+                            icon: "error",
+                            title: "User Alredy Exist PLese Go to Login Page",
+                            text: "Something went wrong!",
+                            footer: '<a href="#">Why do I have this issue?</a>'
+                        });
+                        // alert("This email is already registered. Please log in.");
                         return;
                     }
 
@@ -89,5 +102,6 @@
         });
     </script>
 </body>
+<script src="sweetalert2.min.js"></script>
 
 </html>

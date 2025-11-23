@@ -1,6 +1,7 @@
+/* General reset and body styling for centering */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #b0b0b0;  
+    background-color: #f4f7f6; /* Light background color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,25 +9,36 @@ body {
     margin: 0;
 }
 
-/*  Container Styling  */
+/* Container for the entire sign-up/login area */
 .signup-container {
-    background-color: #ffffff; 
-    padding: 40px;
+    background-color: #ffffff;
+    padding: 30px 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* Maximum width of the form container */
+    text-align: center;
 }
 
-/*  Heading Style */
-.signup-container h1 {
-    text-align: center;
-    color: #00DFA2; 
-    margin-bottom: 30px;
+/* Header and Logo Styling */
+.logo-png h1 {
+    color: #333;
+    margin-bottom: 5px;
     font-size: 1.8em;
 }
 
-/*  Input Groups and Labels */
+.logo-png img {
+    width: 60px; /* Size of the logo image */
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.signup-form {
+    text-align: left;
+}
+
+/* Input Group Styling (Label and Input combination) */
 .input-group {
     margin-bottom: 20px;
 }
@@ -36,75 +48,56 @@ body {
     margin-bottom: 8px;
     font-weight: 600;
     color: #555;
-    font-size: 0.95em;
+    font-size: 0.9em;
 }
 
-/*  Input Field Styling */
-.input-group input[type="text"],
-.input-group input[type="email"],
-.input-group input[type="password"] {
+.input-group input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensures padding doesn't increase total width */
     font-size: 1em;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: border-color 0.3s;
 }
 
-/* Focus Effect  */
 .input-group input:focus {
-    border-color: #ff6b6b; 
-    box-shadow: 0 0 5px rgba(255, 107, 107, 0.4);
+    border-color: #007bff; /* Highlight color on focus */
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
 }
 
-/* Sign Up/Log In Button Styling  */
+/* Submit Button Styling */
 .signup-btn {
     width: 100%;
     padding: 12px;
-    background-color: #007bff; 
+    background-color: #007bff; /* Primary action color */
     color: white;
     border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    border-radius: 8px;
     font-size: 1.1em;
     font-weight: 700;
-    transition: background-color 0.3s, transform 0.1s;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     margin-top: 10px;
 }
 
-/* Button Hover Effect */
 .signup-btn:hover {
-    background-color: #e55a5a; 
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
-/* Forgot Password  */
+/* Forgot Password Link Styling */
 .forgot-link {
-    text-align: center;
+    text-align: right;
     margin-top: 15px;
-    font-size: 1.5rem;
 }
 
 .forgot-link a {
-    color: #0f1c3f; 
+    color: #007bff;
     text-decoration: none;
-    transition: color 0.3s;
+    font-size: 0.9em;
 }
 
 .forgot-link a:hover {
-    color: #ff6b6b; 
     text-decoration: underline;
-}
-
-.logo-png{
-    display: flex;
-}
-.logo-png > img{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-top: 16px;
-    margin-left: 30%;
-    border: 1px solid black;
 }
